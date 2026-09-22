@@ -1,10 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <!-- Sage green circle with soft blue border -->
   <circle cx="32" cy="32" r="29" fill="#8f9b6b" stroke="#a1c6ea" stroke-width="3"/>
-  <!-- Cursive capital W, off-white. x/y nudged left+down from the circle's
-       true center (32,43) to compensate for the glyph's swash tail, whose
-       visual weight sits right/up of its raw bounding box -->
-  <text x="26" y="45.5" text-anchor="middle"
-        font-family="'Snell Roundhand', 'Brush Script MT', cursive"
-        font-size="34" fill="#f1f1f1">W</text>
+  <!-- Bold serif capital W, off-white. Thick strokes (not script/cursive) so
+       the glyph stays legible once downsampled to the 16px browser-tab size -->
+  <text x="32" y="45" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="700" font-size="36" fill="#f1f1f1">W</text>
 </svg>
