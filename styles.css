@@ -288,6 +288,8 @@ section {
 }
 
 .hero-image img {
+  width: 100%;
+  height: auto;
   box-shadow: 0 20px 40px rgba(92, 107, 79, 0.2);
 }
 
