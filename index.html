@@ -52,6 +52,7 @@
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#classes" class="nav-link">Classes</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -62,11 +63,21 @@
 
     <!-- ===================== HERO / HOME ===================== -->
     <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-text">
+          <p class="eyebrow">Private &amp; Pop-Up Yoga &middot; Connecticut</p>
           <h1>Wendy B. Yoga</h1>
           <p class="tagline">Private yoga sessions and pop-up classes across Connecticut &mdash; find your breath, build your strength, and slow down.</p>
-          <a href="#contact" class="btn btn-primary">Book a Session</a>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Book a Session</a>
+            <a href="#classes" class="btn btn-outline">View Class Types</a>
+          </div>
+          <ul class="hero-features">
+            <li><i class="fa-solid fa-check"></i> All levels welcome</li>
+            <li><i class="fa-solid fa-check"></i> Flexible scheduling</li>
+            <li><i class="fa-solid fa-check"></i> Private &amp; group options</li>
+          </ul>
         </div>
         <div class="hero-image">
           <!-- PLACEHOLDER IMAGE: swap src with a real photo of Wendy teaching -->
@@ -77,15 +88,17 @@
 
     <!-- ===================== ABOUT ===================== -->
     <section id="about" class="about">
-      <div class="container about-inner">
+      <div class="container about-inner reveal">
         <div class="about-image">
           <!-- PLACEHOLDER HEADSHOT: swap src with a real headshot of Wendy -->
           <img src="https://placehold.co/400x400/8f9b6b/f1f1f1?text=Wendy" alt="Headshot of Wendy Bien-Aime, Connecticut yoga instructor" width="400" height="400" loading="lazy">
         </div>
         <div class="about-text">
+          <p class="eyebrow">Meet Your Instructor</p>
           <h2>About Wendy</h2>
           <p>I am a Connecticut-based yoga instructor dedicated to helping students of all levels find balance on and off the mat. Whether you're brand new to yoga or a seasoned practitioner, I meet students exactly where they are.</p>
-          <p>My approach blends mindful breathwork, alignment-focused movement, and a genuinely warm teaching style. Sessions are never rushed and never one-size-fits-all. Every private session or pop-up class is shaped around the people in the room.</p>
+          <blockquote class="pull-quote">Sessions are never rushed and never one-size-fits-all.</blockquote>
+          <p>My approach blends mindful breathwork, alignment-focused movement, and a genuinely warm teaching style. Every private session or pop-up class is shaped around the people in the room.</p>
           <p>What sets my offerings apart is flexibility: book a private one-on-one session tailored entirely to your goals, or join me in one of my pop-up yoga classes held at parks, studios, and community spaces throughout Connecticut. Either way, you'll leave feeling more balanced than when you walked in.</p>
         </div>
       </div>
@@ -94,26 +107,31 @@
     <!-- ===================== CLASS TYPES ===================== -->
     <section id="classes" class="classes">
       <div class="container">
+        <p class="eyebrow">Find Your Practice</p>
         <h2>Class Types</h2>
         <p class="section-intro">Distinct class styles for private sessions and pop-up classes around Connecticut. Choose the one that fits where you are today.</p>
 
-        <div class="class-grid">
+        <div class="class-grid reveal">
           <article class="class-card">
+            <div class="class-icon"><i class="fa-solid fa-wind"></i></div>
             <h3>Flow Yoga</h3>
             <p>A dynamic, breath-linked sequence that moves steadily from pose to pose. Great for building strength, coordination, and a meditative sense of rhythm.</p>
           </article>
 
           <article class="class-card">
+            <div class="class-icon"><i class="fa-solid fa-moon"></i></div>
             <h3>Yin Yoga</h3>
             <p>A slow, quiet practice of long-held, passive poses that target the deep connective tissues. Ideal for releasing tension and calming an overactive mind.</p>
           </article>
 
           <article class="class-card">
+            <div class="class-icon"><i class="fa-solid fa-fire"></i></div>
             <h3>Power Yoga</h3>
             <p>An energetic, strength-building practice that turns up the intensity. Expect a challenging, sweat-inducing flow for students who want a full-body workout.</p>
           </article>
 
           <article class="class-card">
+            <div class="class-icon"><i class="fa-solid fa-leaf"></i></div>
             <h3>Gentle Yoga</h3>
             <p>A soft, accessible practice with modifications for every body. Perfect for beginners, older adults, or anyone easing back into movement.</p>
           </article>
@@ -121,9 +139,45 @@
       </div>
     </section>
 
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <!--
+      PLACEHOLDER TESTIMONIALS: the three quotes below are illustrative
+      copy, not real client feedback. Replace the quote text and name/
+      location on each <figure> with real client testimonials before
+      launch (or remove the section if none are available yet).
+    -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <p class="eyebrow">What Students Say</p>
+        <h2>Testimonials</h2>
+        <p class="section-intro">PLACEHOLDER — swap in real client quotes before launch.</p>
+
+        <div class="testimonial-grid reveal">
+          <figure class="testimonial-card">
+            <i class="fa-solid fa-quote-left testimonial-mark" aria-hidden="true"></i>
+            <blockquote>Wendy's private sessions completely changed how I think about my practice. Patient, encouraging, and genuinely skilled at meeting you where you are.</blockquote>
+            <figcaption>&mdash; Placeholder Client, Hartford, CT</figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <i class="fa-solid fa-quote-left testimonial-mark" aria-hidden="true"></i>
+            <blockquote>The pop-up classes are the highlight of my week. Welcoming for beginners, but still challenging enough to keep me coming back.</blockquote>
+            <figcaption>&mdash; Placeholder Client, New Haven, CT</figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <i class="fa-solid fa-quote-left testimonial-mark" aria-hidden="true"></i>
+            <blockquote>I've tried a lot of instructors and Wendy's approach to breathwork and alignment stands out. Highly recommend booking a session.</blockquote>
+            <figcaption>&mdash; Placeholder Client, Stamford, CT</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== SCHEDULE ===================== -->
     <section id="schedule" class="schedule">
       <div class="container">
+        <p class="eyebrow">Upcoming Events</p>
         <h2>Upcoming Pop-Up Classes</h2>
         <p class="section-intro">Join me for any of these upcoming pop-up classes around Connecticut. Space is limited, so arrive a few minutes early.</p>
 
@@ -141,7 +195,7 @@
           elsewhere on the site.
           ============================================================
         -->
-        <ul class="schedule-list">
+        <ul class="schedule-list reveal">
           <li class="schedule-item">
             <span class="schedule-date">Sat, Oct 4, 2025</span>
             <span class="schedule-time">9:00 AM &ndash; 10:00 AM</span>
@@ -168,8 +222,9 @@
 
     <!-- ===================== CONTACT ===================== -->
     <section id="contact" class="contact">
-      <div class="container contact-inner">
+      <div class="container contact-inner reveal">
         <div class="contact-form-wrap">
+          <p class="eyebrow">Let's Connect</p>
           <h2>Get in Touch</h2>
           <p class="section-intro">Ready to book a private session or have a question about an upcoming class? Send a message below.</p>
 
@@ -216,8 +271,26 @@
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Wendy B. Yoga &middot; All Rights Reserved.</p>
+    <div class="container footer-inner">
+      <a href="#home" class="wordmark footer-wordmark">Wendy B. <span>Yoga</span></a>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#classes" class="nav-link">Classes</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="social-icons footer-social">
+        <a href="#" class="social-icon" aria-label="Wendy B. Yoga on Facebook" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#" class="social-icon" aria-label="Wendy B. Yoga on Instagram" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
+      <p class="footer-copyright">&copy; <span id="year"></span> Wendy B. Yoga &middot; All Rights Reserved.</p>
     </div>
   </footer>
 
