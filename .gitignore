@@ -1,0 +1,5 @@
+.DS_Store
+
+# Raw/unoptimized source photos. Keep only optimized web copies
+# (e.g. images/wendy-yoga-1.jpg) tracked in the repo.
+images/*.png
