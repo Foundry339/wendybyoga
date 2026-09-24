@@ -297,6 +297,7 @@ section {
 .hero-image img {
   width: 100%;
   height: auto;
+  border: 3px solid var(--sage);
   box-shadow: 0 20px 40px rgba(92, 107, 79, 0.2);
 }
 
@@ -312,16 +313,15 @@ section {
 }
 
 .about-image {
-  flex: 0 0 280px;
+  flex: 0 0 340px;
 }
 
 .about-image img {
   width: 100%;
   height: auto;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  border-radius: var(--radius);
   border: 6px solid var(--warm-sand);
+  box-shadow: 0 20px 40px rgba(92, 107, 79, 0.2);
 }
 
 .about-text {
@@ -655,7 +655,8 @@ section {
 
   .about-image {
     flex: 0 0 auto;
-    width: 220px;
+    width: 100%;
+    max-width: 380px;
   }
 
   .hero-image {
