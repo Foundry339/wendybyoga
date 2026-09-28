@@ -335,5 +335,29 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!--
+    ============================================================
+    ACCESSIBILITY WIDGET — UserWay (free)
+    ============================================================
+    Adds a floating accessibility menu (text size, contrast,
+    screen-reader helpers, etc.) that works on both mobile and
+    desktop automatically — no separate setup needed per device.
+
+    Sign up for a free account at https://userway.org to get a
+    unique data-account ID, then replace YOUR_USERWAY_ACCOUNT_ID
+    below before launch.
+    ============================================================
+  -->
+  <script>
+    (function (d) {
+      var s = d.createElement("script");
+      s.setAttribute("data-account", "YOUR_USERWAY_ACCOUNT_ID");
+      s.setAttribute("data-color", "#5c6b4f");
+      s.setAttribute("data-position", "3");
+      s.setAttribute("src", "https://cdn.userway.org/widget.js");
+      (d.body || d.head).appendChild(s);
+    })(document);
+  </script>
 </body>
 </html>
