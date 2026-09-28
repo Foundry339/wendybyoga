@@ -366,6 +366,8 @@ section {
 }
 
 .class-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--off-white);
   border-radius: var(--radius);
   padding: 28px 24px;
@@ -400,6 +402,42 @@ section {
 .class-card p {
   color: var(--text-soft);
   font-size: 0.98rem;
+}
+
+/* ---------- Intensity meter ---------- */
+.intensity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(92, 107, 79, 0.12);
+}
+
+.intensity-label {
+  font-family: var(--font-nav);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.intensity-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.intensity-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(92, 107, 79, 0.18);
+}
+
+.intensity-dots .is-filled {
+  background-color: var(--sage);
 }
 
 /* ---------- Testimonials ---------- */
