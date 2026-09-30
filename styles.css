@@ -253,12 +253,15 @@ section {
     radial-gradient(260px 260px at 6% 92%, rgba(161, 198, 234, 0.35), transparent 70%);
 }
 
+/* min-height keeps the background photo readable — without the portrait
+   the row would otherwise collapse to the height of the copy alone */
 .hero-inner {
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   gap: 56px;
+  min-height: 520px;
   padding-bottom: 72px;
 }
 
@@ -307,8 +310,11 @@ section {
   to { transform: translateX(-50%); }
 }
 
+/* Capped so the headline doesn't run the full container width now that
+   the hero copy is the only thing in the row */
 .hero-text {
   flex: 1;
+  max-width: 620px;
 }
 
 .hero h1 {
@@ -350,15 +356,75 @@ section {
   font-size: 0.85rem;
 }
 
-.hero-image {
-  flex: 1;
+/* ============================================================
+   PHOTO HERO — preview treatment
+   ------------------------------------------------------------
+   Puts the pop-up class photo behind the hero and flips the hero
+   text to light so it stays readable over the image.
+   To go back to the blue gradient hero, delete this whole block.
+   ============================================================ */
+.hero {
+  background-image: url('images/wendybyoga-background-grass.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
 }
 
-.hero-image img {
-  width: 100%;
-  height: auto;
-  border: 3px solid var(--sage);
-  box-shadow: 0 20px 40px rgba(92, 107, 79, 0.2);
+/* Scrim: heaviest on the left behind the copy, clearing toward the
+   right so the photo still reads */
+.hero-bg {
+  background: linear-gradient(100deg,
+    rgba(38, 44, 32, 0.9) 0%,
+    rgba(38, 44, 32, 0.78) 42%,
+    rgba(38, 44, 32, 0.35) 100%);
+}
+
+.hero .eyebrow {
+  color: var(--warm-sand);
+}
+
+.hero h1 {
+  color: var(--off-white);
+}
+
+.hero .tagline,
+.hero .hero-features li {
+  color: rgba(241, 241, 241, 0.92);
+}
+
+.hero .hero-features i {
+  color: var(--warm-sand);
+}
+
+.hero .btn-outline {
+  border-color: var(--off-white);
+  color: var(--off-white);
+}
+
+.hero .btn-outline:hover,
+.hero .btn-outline:focus-visible {
+  background-color: var(--off-white);
+  color: var(--deep-sage);
+}
+
+.hero-marquee {
+  background-color: rgba(38, 44, 32, 0.6);
+  border-top-color: rgba(241, 241, 241, 0.25);
+}
+
+.hero-marquee-item {
+  color: var(--off-white);
+}
+
+.hero-marquee-item::after {
+  color: var(--warm-sand);
+}
+
+/* Stacked layout needs an even scrim, since the copy is full-width */
+@media (max-width: 860px) {
+  .hero-bg {
+    background: rgba(38, 44, 32, 0.82);
+  }
 }
 
 /* ---------- About ---------- */
@@ -373,7 +439,7 @@ section {
 }
 
 .about-image {
-  flex: 0 0 340px;
+  flex: 0 0 420px;
 }
 
 .about-image img {
@@ -498,110 +564,6 @@ section {
 
 .intensity-dots .is-filled {
   background-color: var(--sage);
-}
-
-/* ---------- Inspiration / articles ---------- */
-.inspiration {
-  background-color: var(--off-white);
-}
-
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.article-card {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--warm-sand);
-  border-radius: var(--radius);
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 8px 20px rgba(51, 53, 46, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.article-card:hover,
-.article-card:focus-visible {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 28px rgba(51, 53, 46, 0.1);
-}
-
-/* Typographic panel standing in for a photo — the subject's name is the
-   visual anchor, which sidesteps licensing issues around archival portraits */
-.article-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  aspect-ratio: 3 / 2;
-  padding: 20px;
-  text-align: center;
-  background-color: var(--deep-sage);
-}
-
-.article-subject {
-  font-family: var(--font-heading);
-  font-size: 1.9rem;
-  font-weight: 600;
-  line-height: 1.1;
-  color: var(--off-white);
-}
-
-.article-years {
-  font-family: var(--font-nav);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  color: var(--warm-sand);
-}
-
-.article-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 24px;
-}
-
-.article-source {
-  font-family: var(--font-nav);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-soft);
-  margin-bottom: 8px;
-}
-
-.article-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.article-card p {
-  color: var(--text-soft);
-  font-size: 0.98rem;
-  margin-bottom: 18px;
-}
-
-.article-link {
-  font-family: var(--font-nav);
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--deep-sage);
-  margin-top: auto;
-}
-
-.article-link i {
-  margin-left: 6px;
-  transition: transform 0.2s ease;
-}
-
-.article-card:hover .article-link i {
-  transform: translateX(4px);
 }
 
 /* ---------- Schedule ---------- */
@@ -900,10 +862,6 @@ section {
     flex: 0 0 auto;
     width: 100%;
     max-width: 380px;
-  }
-
-  .hero-image {
-    width: 100%;
   }
 
   .about-inner .pull-quote {
