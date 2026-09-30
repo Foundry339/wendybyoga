@@ -171,6 +171,7 @@ section {
 
 .primary-nav ul {
   display: flex;
+  align-items: center;
   gap: 32px;
 }
 
@@ -183,6 +184,16 @@ section {
   color: var(--text-main);
   position: relative;
   padding-bottom: 4px;
+}
+
+/* Nav-scale variant of .btn — the default button padding/size is tuned
+   for hero and form use and overwhelms the header bar */
+.nav-cta {
+  font-family: var(--font-nav);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 10px 22px;
 }
 
 .nav-link::after {
@@ -835,7 +846,9 @@ section {
   }
 }
 
-@media (max-width: 700px) {
+/* Nav collapses at 860px rather than 700px — six items including the
+   Book a Class button overflow the header bar below ~860px */
+@media (max-width: 860px) {
   .nav-toggle {
     display: flex;
   }
@@ -853,11 +866,12 @@ section {
   }
 
   .primary-nav.open {
-    max-height: 260px;
+    max-height: 400px;
   }
 
   .primary-nav ul {
     flex-direction: column;
+    align-items: stretch;
     gap: 0;
     padding: 8px 24px 20px;
   }
@@ -871,6 +885,18 @@ section {
     padding: 14px 0;
   }
 
+  .nav-cta-item {
+    border-top: none;
+  }
+
+  .nav-cta {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 700px) {
   section {
     padding: 56px 0;
   }
