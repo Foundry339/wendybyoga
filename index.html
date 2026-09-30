@@ -52,6 +52,7 @@
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#classes" class="nav-link">Classes</a></li>
+          <li><a href="#offerings" class="nav-link">Offerings</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
           <!-- TODO: swap for <a href="..." class="btn btn-primary nav-cta"> once the booking destination exists -->
           <li class="nav-cta-item"><button type="button" class="btn btn-primary nav-cta">Book a Class</button></li>
@@ -126,7 +127,24 @@
         <h2>Class Types</h2>
         <p class="section-intro">Distinct class styles for private sessions and pop-up classes around Connecticut. Choose the one that fits where you are today.</p>
 
+        <!-- Cards run lightest to most intense: Gentle (1) - Flow (3) - Power (5) -->
         <div class="class-grid reveal">
+          <article class="class-card">
+            <div class="class-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>Gentle Yoga</h3>
+            <p>A soft, accessible practice with modifications for every body. Perfect for beginners, older adults, or anyone easing back into movement.</p>
+            <div class="intensity">
+              <span class="intensity-label">Intensity</span>
+              <span class="intensity-dots" role="img" aria-label="1 out of 5">
+                <span class="is-filled"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+          </article>
+
           <article class="class-card">
             <div class="class-icon"><i class="fa-solid fa-wind"></i></div>
             <h3>Flow Yoga</h3>
@@ -137,22 +155,6 @@
                 <span class="is-filled"></span>
                 <span class="is-filled"></span>
                 <span class="is-filled"></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-          </article>
-
-          <article class="class-card">
-            <div class="class-icon"><i class="fa-solid fa-moon"></i></div>
-            <h3>Yin Yoga</h3>
-            <p>A slow, quiet practice of long-held, passive poses that target the deep connective tissues. Ideal for releasing tension and calming an overactive mind.</p>
-            <div class="intensity">
-              <span class="intensity-label">Intensity</span>
-              <span class="intensity-dots" role="img" aria-label="2 out of 5">
-                <span class="is-filled"></span>
-                <span class="is-filled"></span>
-                <span></span>
                 <span></span>
                 <span></span>
               </span>
@@ -174,69 +176,72 @@
               </span>
             </div>
           </article>
-
-          <article class="class-card">
-            <div class="class-icon"><i class="fa-solid fa-leaf"></i></div>
-            <h3>Gentle Yoga</h3>
-            <p>A soft, accessible practice with modifications for every body. Perfect for beginners, older adults, or anyone easing back into movement.</p>
-            <div class="intensity">
-              <span class="intensity-label">Intensity</span>
-              <span class="intensity-dots" role="img" aria-label="1 out of 5">
-                <span class="is-filled"></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-          </article>
         </div>
       </div>
     </section>
 
-    <!-- ===================== SCHEDULE ===================== -->
-    <section id="schedule" class="schedule">
+    <!-- ===================== OFFERINGS ===================== -->
+    <section id="offerings" class="offerings">
       <div class="container">
-        <p class="eyebrow">Upcoming Events</p>
-        <h2>Upcoming Pop-Up Classes</h2>
-        <p class="section-intro">Join me for any of these upcoming pop-up classes around Connecticut. Space is limited, so arrive a few minutes early.</p>
+        <p class="eyebrow">Ways to Practice</p>
+        <h2>Offerings</h2>
+        <p class="section-intro">Practice one-on-one, bring your own group, or join a pop-up alongside the community.</p>
 
         <!--
           ============================================================
-          HOW TO UPDATE THE SCHEDULE
+          HOW TO UPDATE THE OFFERINGS
           ============================================================
-          Each pop-up class is one <li class="schedule-item"> block below.
-          To add a new class: copy an existing <li>...</li> block, paste
-          it in the list, and edit the date, time, location, and class
-          type text.
-          To remove a class: delete its entire <li>...</li> block.
-          To edit a class: just change the text inside the spans.
-          The list is in plain HTML, so no code changes are needed
-          elsewhere on the site.
+          Each offering is one <article class="offering-card"> below.
+          For each one, edit:
+            1. h3                - the offering name
+            2. offering-price    - the number (drop the <span> if the
+                                   price is "Varies" or similar)
+            3. offering-unit     - "per session", "per person", etc.
+            4. offering-desc     - a sentence or two of description
+            5. offering-list     - the bullet points; add or delete
+                                   <li> lines freely
+
+          To add a 4th offering: copy a whole <article>...</article>
+          block. To remove one: delete its entire block. The grid
+          re-flows on its own, no CSS changes needed.
           ============================================================
         -->
-        <ul class="schedule-list reveal">
-          <li class="schedule-item">
-            <span class="schedule-date">Sat, Oct 4, 2025</span>
-            <span class="schedule-time">9:00 AM &ndash; 10:00 AM</span>
-            <span class="schedule-location">Flow Yoga - Hartford, CT (Location TBD)</span>
-          </li>
-          <li class="schedule-item">
-            <span class="schedule-date">Sun, Oct 12, 2025</span>
-            <span class="schedule-time">4:00 PM &ndash; 5:00 PM</span>
-            <span class="schedule-location">Gentle Yoga - New Haven, CT (Location TBD)</span>
-          </li>
-          <li class="schedule-item">
-            <span class="schedule-date">Sat, Oct 18, 2025</span>
-            <span class="schedule-time">8:30 AM &ndash; 9:30 AM</span>
-            <span class="schedule-location">Power Yoga - Stamford, CT (Location TBD)</span>
-          </li>
-          <li class="schedule-item">
-            <span class="schedule-date">Sun, Oct 26, 2025</span>
-            <span class="schedule-time">5:00 PM &ndash; 6:00 PM</span>
-            <span class="schedule-location">Yin Yoga - West Hartford, CT (Location TBD)</span>
-          </li>
-        </ul>
+        <div class="offering-grid reveal">
+
+          <article class="offering-card">
+            <h3>Individual Private Sessions</h3>
+            <p class="offering-price">$<span>99</span> <span class="offering-unit">per session</span></p>
+            <p class="offering-desc">A one-on-one session shaped entirely around your goals, pace, and body.</p>
+            <ul class="offering-list">
+              <li>Additional person $15 each</li>
+              <li>In your home or a studio space</li>
+              <li>All levels welcome</li>
+            </ul>
+          </article>
+
+          <article class="offering-card">
+            <h3>Group Private Sessions</h3>
+            <p class="offering-price">$<span>199</span> <span class="offering-unit">starting, up to 5 people</span></p>
+            <p class="offering-desc">Bring your own group for a private session built around the people in the room.</p>
+            <ul class="offering-list">
+              <li>Additional people $15 each</li>
+              <li>In your space or a studio</li>
+              <li>All levels welcome</li>
+            </ul>
+          </article>
+
+          <article class="offering-card">
+            <h3>Pop-Up Classes</h3>
+            <p class="offering-price">$<span>00</span> <span class="offering-unit">per person</span></p>
+            <p class="offering-desc">Group classes held at parks, studios, and community spaces around Connecticut.</p>
+            <ul class="offering-list">
+              <li>Vinyasa flow format</li>
+              <li>Mats available on request</li>
+              <li>Beginner friendly</li>
+            </ul>
+          </article>
+
+        </div>
       </div>
     </section>
 
@@ -302,6 +307,7 @@
       <nav class="footer-nav" aria-label="Footer">
         <a href="#about" class="nav-link">About</a>
         <a href="#classes" class="nav-link">Classes</a>
+        <a href="#offerings" class="nav-link">Offerings</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
