@@ -194,6 +194,9 @@ section {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 10px 22px;
+  /* An <a> won't center its own text the way a <button> does, and this
+     goes full-width in the mobile menu */
+  text-align: center;
 }
 
 .nav-link::after {
@@ -476,7 +479,7 @@ section {
 
 /* ---------- Class Types ---------- */
 .classes {
-  background-color: var(--warm-sand);
+  background-color: var(--off-white);
 }
 
 .classes h2,
@@ -496,7 +499,7 @@ section {
 .class-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--off-white);
+  background-color: var(--warm-sand);
   border-radius: var(--radius);
   padding: 28px 24px;
   border-top: 4px solid var(--sage);
@@ -570,7 +573,7 @@ section {
 
 /* ---------- Offerings ---------- */
 .offerings {
-  background-color: var(--off-white);
+  background-color: var(--warm-sand);
 }
 
 .offering-grid {
@@ -582,7 +585,7 @@ section {
 .offering-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--warm-sand);
+  background-color: var(--off-white);
   border-radius: var(--radius);
   padding: 28px 24px;
   box-shadow: 0 8px 20px rgba(51, 53, 46, 0.06);
@@ -641,6 +644,57 @@ section {
   height: 8px;
   border-radius: 50%;
   background-color: var(--sage);
+}
+
+/* ---------- Upcoming pop-up dates ---------- */
+.popup-dates {
+  margin-top: 40px;
+}
+
+.popup-heading {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+}
+
+.popup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: none;
+}
+
+.popup-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  background-color: var(--off-white);
+  border-left: 4px solid var(--sage);
+  border-radius: var(--radius);
+  padding: 18px 24px;
+}
+
+.popup-date {
+  font-weight: 700;
+  color: var(--deep-sage);
+  min-width: 150px;
+}
+
+.popup-time {
+  color: var(--text-soft);
+  min-width: 90px;
+}
+
+.popup-location {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.popup-note {
+  margin-top: 14px;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--text-soft);
 }
 
 /* ---------- Contact ---------- */
@@ -965,6 +1019,12 @@ section {
 @media (max-width: 700px) {
   section {
     padding: 56px 0;
+  }
+
+  .popup-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 }
 

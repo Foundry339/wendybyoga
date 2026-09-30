@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Smooth scroll for nav links (CSS handles this too via
   // `scroll-behavior: smooth`; this closes the mobile menu on click
   // and provides a JS fallback for older browsers) ----
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link, .nav-cta');
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const targetId = link.getAttribute('href');

@@ -51,11 +51,11 @@
         <ul>
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#classes" class="nav-link">Classes</a></li>
           <li><a href="#offerings" class="nav-link">Offerings</a></li>
+          <li><a href="#classes" class="nav-link">Classes</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
-          <!-- TODO: swap for <a href="..." class="btn btn-primary nav-cta"> once the booking destination exists -->
-          <li class="nav-cta-item"><button type="button" class="btn btn-primary nav-cta">Book a Class</button></li>
+          <!-- TODO: repoint at the real booking URL once it exists; goes to the contact form for now -->
+          <li class="nav-cta-item"><a href="#contact" class="btn btn-primary nav-cta">Book a Class</a></li>
         </ul>
       </nav>
     </div>
@@ -72,7 +72,7 @@
           <h1>Yoga spaces made with us in mind.</h1>
           <p class="tagline">Creating intentional spaces where BIPOC can experience yoga as a practice of connection, belonging, and honoring the body.</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Book a Session</a>
+            <a href="#contact" class="btn btn-primary">Book a Class</a>
             <a href="#classes" class="btn btn-outline">View Class Types</a>
           </div>
           <ul class="hero-features">
@@ -116,6 +116,95 @@
           <p>Yoga has been an important part of my own journey, giving me a way to slow down, be present, and reconnect with myself. As a 200-hour certified yoga teacher with 6 years of teaching experience, I bring that same intention to my teaching. I meet students where they are and encourage them to explore their practice without pressure or expectation.</p>
           <blockquote class="pull-quote">Sessions are never rushed and never one-size-fits-all.</blockquote>
           <p>I offer pop-up yoga classes and private sessions designed to make yoga approachable, meaningful, and connected to real life. My classes range in intensity and style to meet all students where they are. </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OFFERINGS ===================== -->
+    <section id="offerings" class="offerings">
+      <div class="container">
+        <p class="eyebrow">Ways to Practice</p>
+        <h2>Offerings</h2>
+        <p class="section-intro">Practice one-on-one, bring your own group, or join a pop-up alongside the community.</p>
+
+        <!--
+          ============================================================
+          HOW TO UPDATE THE OFFERINGS
+          ============================================================
+          Each offering is one <article class="offering-card"> below.
+          For each one, edit:
+            1. h3                - the offering name
+            2. offering-price    - the number (drop the <span> if the
+                                   price is "Varies" or similar)
+            3. offering-unit     - "per session", "per person", etc.
+            4. offering-desc     - a sentence or two of description
+            5. offering-list     - the bullet points; add or delete
+                                   <li> lines freely
+
+          To add a 4th offering: copy a whole <article>...</article>
+          block. To remove one: delete its entire block. The grid
+          re-flows on its own, no CSS changes needed.
+          ============================================================
+        -->
+        <div class="offering-grid reveal">
+
+          <article class="offering-card">
+            <h3>Pop-Up Classes</h3>
+            <p class="offering-price">$<span>25&ndash;$45</span> <span class="offering-unit">per person</span></p>
+            <p class="offering-desc">Group classes held at parks, studios, and community spaces around Connecticut.</p>
+            <ul class="offering-list">
+              <li>Vinyasa flow format</li>
+              <li>Mats available on request</li>
+              <li>Beginner friendly</li>
+            </ul>
+          </article>
+
+          <article class="offering-card">
+            <h3>Individual Private Sessions</h3>
+            <p class="offering-price">$<span>99</span> <span class="offering-unit">per session</span></p>
+            <p class="offering-desc">A one-on-one session shaped entirely around your goals, pace, and body.</p>
+            <ul class="offering-list">
+              <li>Additional person $15 each</li>
+              <li>In your home or a studio space</li>
+              <li>All levels welcome</li>
+            </ul>
+          </article>
+
+          <article class="offering-card">
+            <h3>Group Private Sessions</h3>
+            <p class="offering-price">$<span>199</span> <span class="offering-unit">starting, up to 5 people</span></p>
+            <p class="offering-desc">Bring your own group for a private session built around the people in the room.</p>
+            <ul class="offering-list">
+              <li>Additional people $15 each</li>
+              <li>In your space or a studio</li>
+              <li>All levels welcome</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <!--
+          ============================================================
+          HOW TO UPDATE THE POP-UP DATES
+          ============================================================
+          Each date is one <li class="popup-item"> block below.
+          To add a date: copy an existing <li>...</li> block, paste it
+          in the list, and edit the date, time, and location text.
+          To remove a date: delete its entire <li>...</li> block.
+          If no dates are scheduled, delete the whole
+          <div class="popup-dates"> block and the heading with it.
+          ============================================================
+        -->
+        <div class="popup-dates reveal">
+          <h3 class="popup-heading">Upcoming Pop-Up Dates</h3>
+          <ul class="popup-list">
+            <li class="popup-item">
+              <span class="popup-date">Sat, Nov 21, 2026</span>
+              <span class="popup-time">9:00 AM</span>
+              <span class="popup-location">North Haven, CT</span>
+            </li>
+          </ul>
+          <p class="popup-note">More dates announced soon.</p>
         </div>
       </div>
     </section>
@@ -176,71 +265,6 @@
               </span>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== OFFERINGS ===================== -->
-    <section id="offerings" class="offerings">
-      <div class="container">
-        <p class="eyebrow">Ways to Practice</p>
-        <h2>Offerings</h2>
-        <p class="section-intro">Practice one-on-one, bring your own group, or join a pop-up alongside the community.</p>
-
-        <!--
-          ============================================================
-          HOW TO UPDATE THE OFFERINGS
-          ============================================================
-          Each offering is one <article class="offering-card"> below.
-          For each one, edit:
-            1. h3                - the offering name
-            2. offering-price    - the number (drop the <span> if the
-                                   price is "Varies" or similar)
-            3. offering-unit     - "per session", "per person", etc.
-            4. offering-desc     - a sentence or two of description
-            5. offering-list     - the bullet points; add or delete
-                                   <li> lines freely
-
-          To add a 4th offering: copy a whole <article>...</article>
-          block. To remove one: delete its entire block. The grid
-          re-flows on its own, no CSS changes needed.
-          ============================================================
-        -->
-        <div class="offering-grid reveal">
-
-          <article class="offering-card">
-            <h3>Individual Private Sessions</h3>
-            <p class="offering-price">$<span>99</span> <span class="offering-unit">per session</span></p>
-            <p class="offering-desc">A one-on-one session shaped entirely around your goals, pace, and body.</p>
-            <ul class="offering-list">
-              <li>Additional person $15 each</li>
-              <li>In your home or a studio space</li>
-              <li>All levels welcome</li>
-            </ul>
-          </article>
-
-          <article class="offering-card">
-            <h3>Group Private Sessions</h3>
-            <p class="offering-price">$<span>199</span> <span class="offering-unit">starting, up to 5 people</span></p>
-            <p class="offering-desc">Bring your own group for a private session built around the people in the room.</p>
-            <ul class="offering-list">
-              <li>Additional people $15 each</li>
-              <li>In your space or a studio</li>
-              <li>All levels welcome</li>
-            </ul>
-          </article>
-
-          <article class="offering-card">
-            <h3>Pop-Up Classes</h3>
-            <p class="offering-price">$<span>25&ndash;$45</span> <span class="offering-unit">per person</span></p>
-            <p class="offering-desc">Group classes held at parks, studios, and community spaces around Connecticut.</p>
-            <ul class="offering-list">
-              <li>Vinyasa flow format</li>
-              <li>Mats available on request</li>
-              <li>Beginner friendly</li>
-            </ul>
-          </article>
-
         </div>
       </div>
     </section>
@@ -306,8 +330,8 @@
 
       <nav class="footer-nav" aria-label="Footer">
         <a href="#about" class="nav-link">About</a>
-        <a href="#classes" class="nav-link">Classes</a>
         <a href="#offerings" class="nav-link">Offerings</a>
+        <a href="#classes" class="nav-link">Classes</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
