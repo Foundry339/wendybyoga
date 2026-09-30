@@ -52,7 +52,7 @@
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#classes" class="nav-link">Classes</a></li>
-          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#inspiration" class="nav-link">Inspiration</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -179,37 +179,72 @@
       </div>
     </section>
 
-    <!-- ===================== TESTIMONIALS ===================== -->
-    <!--
-      PLACEHOLDER TESTIMONIALS: the three quotes below are illustrative
-      copy, not real client feedback. Replace the quote text and name/
-      location on each <figure> with real client testimonials before
-      launch (or remove the section if none are available yet).
-    -->
-    <section id="testimonials" class="testimonials">
+    <!-- ===================== INSPIRATION ===================== -->
+    <section id="inspiration" class="inspiration">
       <div class="container">
-        <p class="eyebrow">What Students Say</p>
-        <h2>Testimonials</h2>
-        <p class="section-intro">PLACEHOLDER - swap in real client quotes before launch.</p>
+        <p class="eyebrow">Stories That Move Us</p>
+        <h2>Inspiration</h2>
+        <p class="section-intro">Readings on the long history of Black communities and yoga, and the people who continue to make this practice a place of belonging.</p>
 
-        <div class="testimonial-grid reveal">
-          <figure class="testimonial-card">
-            <i class="fa-solid fa-quote-left testimonial-mark" aria-hidden="true"></i>
-            <blockquote>Wendy's private sessions completely changed how I think about my practice. Patient, encouraging, and genuinely skilled at meeting you where you are.</blockquote>
-            <figcaption>- Placeholder Client, Hartford, CT</figcaption>
-          </figure>
+        <!--
+          ============================================================
+          HOW TO UPDATE THE INSPIRATION ARTICLES
+          ============================================================
+          Each article is one <a class="article-card"> block below.
+          For each one:
+            1. href              - the article's full URL
+            2. article-subject   - the person's name (large serif text)
+            3. article-years     - their birth/death years
+            4. article-source    - the publication name
+            5. h3                - the article headline
+            6. p                 - a one or two sentence description
 
-          <figure class="testimonial-card">
-            <i class="fa-solid fa-quote-left testimonial-mark" aria-hidden="true"></i>
-            <blockquote>The pop-up classes are the highlight of my week. Welcoming for beginners, but still challenging enough to keep me coming back.</blockquote>
-            <figcaption>- Placeholder Client, New Haven, CT</figcaption>
-          </figure>
+          To add a 4th article: copy a whole <a>...</a> block and paste
+          it in the grid. To remove one: delete its entire <a>...</a>
+          block. The grid re-flows on its own, no CSS changes needed.
+          ============================================================
+        -->
+        <div class="article-grid reveal">
 
-          <figure class="testimonial-card">
-            <i class="fa-solid fa-quote-left testimonial-mark" aria-hidden="true"></i>
-            <blockquote>I've tried a lot of instructors and Wendy's approach to breathwork and alignment stands out. Highly recommend booking a session.</blockquote>
-            <figcaption>- Placeholder Client, Stamford, CT</figcaption>
-          </figure>
+          <a class="article-card" href="https://bulletin.hds.harvard.edu/why-rosa-parks-did-yoga/" target="_blank" rel="noopener noreferrer">
+            <div class="article-figure">
+              <span class="article-subject">Rosa Parks</span>
+              <span class="article-years">1913 &ndash; 2005</span>
+            </div>
+            <div class="article-body">
+              <span class="article-source">Harvard Divinity Bulletin</span>
+              <h3>Why Rosa Parks Did Yoga</h3>
+              <p>Scholar Stephanie Y. Evans discovered that Parks not only practiced yoga but taught it, and makes the case for rest and collective care as what sustained Black women leaders.</p>
+              <span class="article-link">Read article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
+          <a class="article-card" href="https://www.yogajournal.com/lifestyle/tina-turner/?scope=anon" target="_blank" rel="noopener noreferrer">
+            <div class="article-figure">
+              <span class="article-subject">Tina Turner</span>
+              <span class="article-years">1939 &ndash; 2023</span>
+            </div>
+            <div class="article-body">
+              <span class="article-source">Yoga Journal</span>
+              <h3>What Tina Turner Taught Me About Finding My Spiritual Path</h3>
+              <p>Turner's decades of Buddhist chanting widen what yoga can mean, reaching past postures into sound, breath, and devotion as forms of healing.</p>
+              <span class="article-link">Read article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
+          <a class="article-card" href="https://ensoapothecary.com/blogs/enso-living-blog/black-icons-practicing-yoga-eartha-kitt-part-3" target="_blank" rel="noopener noreferrer">
+            <div class="article-figure">
+              <span class="article-subject">Eartha Kitt</span>
+              <span class="article-years">1927 &ndash; 2008</span>
+            </div>
+            <div class="article-body">
+              <span class="article-source">Ens&#333; Apothecary</span>
+              <h3>Black Icons Practicing Yoga: Eartha Kitt</h3>
+              <p>Kitt found yoga in the 1950s and practiced it daily for the rest of her life, crediting it for her strength, clarity, and staying centered through a demanding career.</p>
+              <span class="article-link">Read article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
@@ -322,7 +357,7 @@
       <nav class="footer-nav" aria-label="Footer">
         <a href="#about" class="nav-link">About</a>
         <a href="#classes" class="nav-link">Classes</a>
-        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#inspiration" class="nav-link">Inspiration</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 

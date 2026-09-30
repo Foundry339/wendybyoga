@@ -440,40 +440,108 @@ section {
   background-color: var(--sage);
 }
 
-/* ---------- Testimonials ---------- */
-.testimonials {
+/* ---------- Inspiration / articles ---------- */
+.inspiration {
   background-color: var(--off-white);
 }
 
-.testimonial-grid {
+.article-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
 
-.testimonial-card {
+.article-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--warm-sand);
   border-radius: var(--radius);
-  padding: 28px 24px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 20px rgba(51, 53, 46, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.testimonial-mark {
-  color: var(--sage);
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  display: block;
+.article-card:hover,
+.article-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(51, 53, 46, 0.1);
 }
 
-.testimonial-card blockquote {
-  color: var(--text-main);
-  font-size: 1rem;
-  margin-bottom: 16px;
+/* Typographic panel standing in for a photo — the subject's name is the
+   visual anchor, which sidesteps licensing issues around archival portraits */
+.article-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  aspect-ratio: 3 / 2;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--deep-sage);
 }
 
-.testimonial-card figcaption {
+.article-subject {
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
   font-weight: 600;
+  line-height: 1.1;
+  color: var(--off-white);
+}
+
+.article-years {
+  font-family: var(--font-nav);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--warm-sand);
+}
+
+.article-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+}
+
+.article-source {
+  font-family: var(--font-nav);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+
+.article-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.article-card p {
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  margin-bottom: 18px;
+}
+
+.article-link {
+  font-family: var(--font-nav);
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--deep-sage);
-  font-size: 0.92rem;
+  margin-top: auto;
+}
+
+.article-link i {
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+.article-card:hover .article-link i {
+  transform: translateX(4px);
 }
 
 /* ---------- Schedule ---------- */
