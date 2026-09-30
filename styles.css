@@ -237,6 +237,9 @@ section {
   position: relative;
   background: linear-gradient(160deg, var(--sky-blue) 0%, var(--sky-blue-pale) 100%);
   padding-top: 90px;
+  /* No bottom padding so the marquee strip sits flush on the hero's
+     lower edge; .hero-inner carries the spacing instead */
+  padding-bottom: 0;
   overflow: hidden;
 }
 
@@ -256,6 +259,52 @@ section {
   display: flex;
   align-items: center;
   gap: 56px;
+  padding-bottom: 72px;
+}
+
+/* ---------- Hero marquee ---------- */
+.hero-marquee {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 14px 0;
+  background-color: rgba(241, 241, 241, 0.45);
+  border-top: 1px solid rgba(92, 107, 79, 0.15);
+}
+
+.hero-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 26s linear infinite;
+}
+
+.hero-marquee-item {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--deep-sage);
+  white-space: nowrap;
+  padding-right: 56px;
+}
+
+/* Decorative separator sitting in the gap between repeats */
+.hero-marquee-item::after {
+  content: '\00B7';
+  margin-left: 56px;
+  color: var(--sage);
+}
+
+/* Lets a visitor stop the motion to read it — WCAG 2.2.2 */
+.hero-marquee:hover .hero-marquee-track,
+.hero-marquee:focus-within .hero-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .hero-text {
@@ -812,6 +861,25 @@ section {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  /* Collapse the marquee to a single static centered line */
+  .hero-marquee-track {
+    animation: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-marquee-item[aria-hidden="true"] {
+    display: none;
+  }
+
+  .hero-marquee-item {
+    padding-right: 0;
+  }
+
+  .hero-marquee-item::after {
+    content: none;
   }
 }
 
