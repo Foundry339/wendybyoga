@@ -33,6 +33,89 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
   <link rel="stylesheet" href="styles.css">
+
+  <!--
+    ============================================================
+    STRUCTURED DATA (JSON-LD)
+    ------------------------------------------------------------
+    Tells Google what this business is, who runs it, where it
+    serves, and what it costs. Keep this in sync with the
+    Offerings section whenever pricing changes.
+
+    Deliberately omitted: street address and telephone (this is a
+    service-area business with no fixed premises) and any review
+    or rating data (never publish ratings that aren't real).
+    Add "address" and "telephone" here if that changes.
+    ============================================================
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.wendybyoga.com/#business",
+    "name": "Wendy B. Yoga",
+    "description": "Intentional yoga spaces centered on community, connection, and belonging. Private sessions and pop-up classes across Connecticut.",
+    "url": "https://www.wendybyoga.com/",
+    "image": "https://www.wendybyoga.com/images/wendy-yoga-5.jpg",
+    "founder": {
+      "@type": "Person",
+      "name": "Wendy Bien-Aime",
+      "jobTitle": "Yoga Instructor",
+      "description": "200-hour certified yoga teacher with 6 years of teaching experience."
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Connecticut"
+    },
+    "priceRange": "$25-$199",
+    "sameAs": [
+      "https://www.instagram.com/wendybyogact",
+      "https://www.facebook.com/wendybyogact",
+      "https://www.youtube.com/@WendyBYoga",
+      "https://www.tiktok.com/@wendybyogact"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Yoga Offerings",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Pop-Up Classes",
+            "description": "Group classes held at parks, studios, and community spaces around Connecticut."
+          },
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 25,
+            "maxPrice": 45,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Individual Private Sessions",
+            "description": "A one-on-one session shaped entirely around your goals, pace, and body."
+          },
+          "price": 99,
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Group Private Sessions",
+            "description": "A private session for your own group, starting at up to 5 people."
+          },
+          "price": 199,
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
